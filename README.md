@@ -15,17 +15,12 @@ $ npm install --save-dev gulp-ignite gulp-ignite-sass-lint
 ## example
 
 ```js
-'use strict';
-
-import ignite from 'gulp-ignite';
+import { task } from 'gulp-ignite';
 import sassLint from 'gulp-sass-lint';
 
-const tasks = [sassLint];
-const options = {
-  'sass-lint': {},
-};
-
-ignite.start(tasks, options);
+task(sassLint);
+// or if you want to rename
+// task('cool-sass-lint-name', sassLint);
 
 ```
 
